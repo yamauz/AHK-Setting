@@ -1,0 +1,11 @@
+# すべてをignore
+*
+# すべてのディレクトリをホワイトリストに追加する
+!*/
+# ホワイトリストに入れたいファイルを戸別に許可する
+!.gitignore
+!AutoHotkeyU64.ahk
+!/sub/*
+# !/src/*.ahk
+# !/.gitignore
+# !/AutoHotkeyU64.ahk
