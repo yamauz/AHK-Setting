@@ -4,14 +4,6 @@
   Reload
   return
 #IfWinActive, Ahk_exe Code.exe 
-; move to left tab
-vk1D & h::
-  send ^{PgUp}
-  return
-; move to right tab
-vk1D & l::
-  send ^{PgDn}
-  return
 ; open snippents and enter
 vk1D & j::
   send ^{space}

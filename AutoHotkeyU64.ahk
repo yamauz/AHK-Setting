@@ -1,15 +1,44 @@
-﻿vk1D & Space::
+﻿; --------------example
+; Win + H
+; #h::Send, Windows 
+; Ctrl + J
+; ^j::Send, My First Script 
+; Alt + K
+; !k::Send, Hello World     
+; Shift + L
+; +l::Send, Test            
+
+; Backspace
+vk1D & Space::
   send {BackSpace}
 return
+; Enter
 vk1D & vk1C::
   send {Enter}
 return
+; move to left tab
+vk1D & ,::
+  send ^{PgUp}
+return
+; move to right tab
+vk1D & .::
+  send ^{PgDn}
+return
+
 #IfWinActive, AutoHotkeyU64.ahk
 ~^s::
   MsgBox reloaded
   Reload
   return
 return
+
+; prohibit enter and backspace key
+Enter::
+return
+BackSpace::
+return
+
+
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
@@ -20,17 +49,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #InClude sub\chrome.ahk
 #InClude sub\kindle.ahk
 
-; ~vk1D::Return                  ;無変換単独はそのまま素通し
-; ~vk1C::Return                  ;変換単独はそのまま素通し
-
-; Win + H
-; #h::Send, Windows 
-; Ctrl + J
-; ^j::Send, My First Script 
-; Alt + K
-; !k::Send, Hello World     
-; Shift + L
-; +l::Send, Test            
 
 
 ; #IfWinNotActive, ahk_exe Explorer.EXE
