@@ -54,6 +54,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #InClude sub\kindle.ahk
 #InClude sub\powershell.ahk
 #InClude sub\fluent-terminal.ahk
+#InClude sub\git.ahk
 
 ; #IfWinNotActive, ahk_exe Explorer.EXE
 ; ~^s::
