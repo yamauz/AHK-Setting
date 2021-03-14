@@ -33,28 +33,6 @@
         sleep,200
         send i{Enter}
     return
-    vk1D & n::
-        send {Alt}
-        Input, char, L1 
-        ; directory 
-        if char = D 
-        {
-            send hn
-            return
-        }
-        ; text
-        if char = T 
-        {
-            send hw{Up}{Up}{Enter}
-            return
-        }
-        ; javascript
-        if char = J 
-        {
-            send hw{Down}{Down}{Down}{Down}{Down}{Down}{Down}{Enter}
-            return
-        }
-    return
     vk1c & o::
         Input, char, L1 
         ; directory 
@@ -92,10 +70,8 @@
     Return
     
     #IfWinNotActive, ahk_exe Explorer.EXE 
-    vk1D & e:: 
+    F13 & e:: 
         WinActivate ,ahk_class CabinetWClass
-        ControlFocus, DirectUIHWND3, A
-        SendInput, {Space}
     return
     Return
     

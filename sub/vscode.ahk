@@ -166,14 +166,6 @@
         send {Space}{Space}{Space}bdjk
     return
 
-    ; find #  ---------------------------------------------
-    vk1C & n:: 
-        send ^c/{#}{#}{Enter}
-    return
-    ; find "  ---------------------------------------------
-    vk1C & s:: 
-        send {Space}{Space}s"
-    return
     ; delete content  -------------------------------------
     vk1C & d:: 
         Input, char, L1 
@@ -228,6 +220,8 @@
     return
 
     #IfWinNotActive, Ahk_exe Code.exe
+    F13 & v:: 
+        WinActivate ,ahk_exe code.exe
     Return
 
     #IfWinExist, Ahk_exe Code.exe 

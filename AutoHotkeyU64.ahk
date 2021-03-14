@@ -42,6 +42,17 @@ vk1D & vk1C::
         send ^{Enter}
     Else
         send {Enter}
+return
+; IME
+vk1D & n::
+    If GetKeyState("Ctrl", "P")
+        send ^{Enter}
+    Else
+        send {vkf3}
+return
+; Right Click
+vk1D & F13::
+        send {AppsKey}
 Return
 ; move to left tab
 vk1D & ,::
@@ -65,7 +76,7 @@ SendMode Input ; Recommended for new scripts due to its superior speed and relia
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 #Include .\IME.ahk
-#InClude sub\oxygen.ahk
+; #InClude sub\oxygen.ahk
 #InClude sub\vscode.ahk
 #InClude sub\vscode_workspace.ahk
 #InClude sub\explore.ahk
