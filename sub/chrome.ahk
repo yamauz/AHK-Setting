@@ -21,7 +21,6 @@
     Return
     
     #IfWinNotActive, ahk_exe chrome.exe 
-        vk1D & c:: WinActivate ,ahk_exe chrome.exe
     Return
     
     #IfWinExist, Ahk_exe Code.exe 

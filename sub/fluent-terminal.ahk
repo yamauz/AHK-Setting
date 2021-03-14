@@ -7,9 +7,9 @@
     #IfWinActive, ahk_exe powershell.exe
     Return
     
-    #IfWinNotActive, powershell ‎- Fluent Terminal
+    #IfWinNotActive, pastify ‎- Fluent Terminal
     vk1D & f:: 
-        WinActivate ,powershell ‎- Fluent Terminal
-    return
+        WinActivate ,pastify ‎- Fluent Terminal
+            return
     Return
     
